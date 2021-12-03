@@ -13,6 +13,21 @@ const routes = [
     path: '/create',
     name: 'Create',
     component: () => import('../components/CreateParty')
+  },
+  {
+    path: '/create/id',
+    name: 'id',
+    component: () => import('../components/Id')
+  },
+  {
+    path: '/party/:id',
+    name: 'Party',
+    component: () => import('../components/ParticipantList')
+  },
+  {
+    path: '/party/:id/:name',
+    name: 'Santa',
+    component: () => import('../components/Santa')
   }
 
 ]

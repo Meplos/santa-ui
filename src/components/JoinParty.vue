@@ -19,11 +19,11 @@
 <script>
 export default {
     data: () => ({
-        partyId: ''
+        partyId: 'sqdsd'
     }),
     methods: {
         joinParty() {
-            this.$emit('nav', { name: "Party", props: { id: this.partyId } });
+            this.$emit('nav', { name: "Party", params: { id: this.partyId } });
         },
         createParty() {
             this.$emit('nav', { name: "Create" });

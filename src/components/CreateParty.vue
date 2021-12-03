@@ -48,9 +48,11 @@ export default {
         },
         create() {
             const trueParticipants = this.participants.filter(participant => participant.length > 0);
-            this.$emit("create", trueParticipants);
-            this.$router.push("/");
+
+            //TODO : REST request to create
             console.log(trueParticipants);
+            const id = "jflqsdjfmlsjdfuem";
+            this.$router.push({ name: "id", params: { id } });
         }
     }
 }

@@ -21,8 +21,8 @@ export default {
     id: undefined
   }),
   methods: {
-    navigate({ name, props }) {
-      this.$router.push({ name, props });
+    navigate({ name, params, props }) {
+      this.$router.push({ name, params, props });
     },
     createParty(participants) {
       //TODO REST call to create party
