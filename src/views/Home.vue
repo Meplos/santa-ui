@@ -1,18 +1,40 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="home__header"></div>
+    <div class="home__body">
+      <p v-if="id">Votre partie à l'id: {{ id }}</p>
+      <router-view @nav="navigate" @create="createParty"></router-view>
+    </div>
+    <div class="home__footer"></div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+  },
+  data: () => ({
+    id: undefined
+  }),
+  methods: {
+    navigate({ name, props }) {
+      this.$router.push({ name, props });
+    },
+    createParty(participants) {
+      //TODO REST call to create party
+      console.log(participants);
+      this.id = "qmldkjfqmldjfmq"
+    }
   }
 }
 </script>
+<style>
+.home__body {
+  margin: auto;
+  top: 50%;
+}
+</style>
