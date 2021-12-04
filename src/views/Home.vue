@@ -30,7 +30,9 @@ export default {
   },
   mounted: function () {
     axios
-      .get("https://santaserver-dev.herokuapp.com/test")
+      .get("https://santaserver-dev.herokuapp.com/test", {
+        headers: { "Access-Control-Allow-Origin": "*" },
+      })
       .then((res) => {
         console.log(res);
       })
