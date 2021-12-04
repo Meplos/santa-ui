@@ -1,7 +1,10 @@
 <template>
-  <div id="app">
+  <v-app id="app">
+    <div class="home__header">
+      <h1>Secret Santa</h1>
+    </div>
     <home />
-  </div>
+  </v-app>
 </template>
 <script>
 import Home from './views/Home.vue'
@@ -13,24 +16,31 @@ export default {
 }
 </script>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+.home {
+  font-family: Satisfy, cursive;
 }
 
-#nav {
-  padding: 30px;
+.home__header {
+  background-color: #e53e3e;
+  color: #ffff;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-end-start-radius: 10px;
+  border-end-end-radius: 10px;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.home__header > h1 {
+  font-weight: 100;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.home__footer {
+  position: fixed;
+  bottom: 0px;
+  margin: 0 auto;
 }
 </style>

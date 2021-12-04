@@ -1,12 +1,16 @@
 <template>
   <div class="home">
-    <div class="home__header">
-      <h1>Secret Santa</h1>
-    </div>
     <div class="home__body">
       <router-view @nav="navigate" @create="createParty"></router-view>
     </div>
-    <div class="home__footer"></div>
+    <div class="home__footer">
+      <v-img
+        class="home-footer__img"
+        src="../assets/christmas-tree.png"
+        max-width="256"
+        max-height="256"
+      ></v-img>
+    </div>
   </div>
 </template>
 
@@ -24,7 +28,6 @@ export default {
       this.$router.push({ name, params, props });
     },
     createParty(participants) {
-      //TODO REST call to create party
       console.log(participants);
     },
   },
@@ -43,27 +46,10 @@ export default {
 };
 </script>
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
-.home {
-  font-family: Satisfy, cursive;
-  margin: auto;
-  top: 50%;
+.home__body {
+  margin: auto 0;
 }
-
-.home__header {
-  background-color: #e53e3e;
-  color: #ffff;
-  height: 50px;
-  width: 100%;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-end-start-radius: 10px;
-  border-end-end-radius: 10px;
-}
-
-.home__header > h1 {
-  font-weight: 100;
+.home__footer {
+  margin: 0 auto;
 }
 </style>

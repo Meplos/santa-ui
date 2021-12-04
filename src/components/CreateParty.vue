@@ -1,7 +1,7 @@
 <template>
   <div class="create-party">
     <v-row
-      class="justify-content align-content"
+      class="justify-content align-content create-party__row"
       v-for="(participant, index) in participants"
       :key="index"
     >
@@ -18,19 +18,18 @@
       </v-btn>
       <v-spacer></v-spacer>
     </v-row>
-    <v-row class="ma-auto align-center">
-      <v-spacer></v-spacer>
-      <v-col col="1">
-        <v-btn fab @click="add">
+    <v-row class="ma-auto align-cente create-party__btns">
+      <v-col cols="2">
+        <v-btn fab @click="add" color="secondary">
           <v-icon>mdi-plus</v-icon>
         </v-btn>
       </v-col>
-      <v-col col="1">
-        <v-btn fab @click="create" class="ma-2">
+      <v-spacer></v-spacer>
+      <v-col cols="2" offset-sm-10>
+        <v-btn fab @click="create" color="secondary">
           <v-icon>mdi-send</v-icon>
         </v-btn>
       </v-col>
-      <v-spacer></v-spacer>
     </v-row>
   </div>
 </template>
@@ -59,6 +58,13 @@ export default {
 };
 </script>
 <style>
-.create-party {
+.create-party__btns {
+  bottom: 0px;
+  position: fixed;
+  z-index: 2;
+}
+
+.create-party__row {
+  z-index: 2;
 }
 </style>

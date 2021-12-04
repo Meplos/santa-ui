@@ -1,21 +1,13 @@
 <template>
   <v-container class="join-party">
-    <v-row>
-      <v-text-field
-        class="join-party__input"
-        filled
-        dense
-        rounded
-        v-model="partyId"
-        placeholder="Entrer le code du tirage"
-      ></v-text-field>
-      <v-btn icon @click="joinParty" class="join-party__next">
-        <v-icon class large primary>mdi-arrow-right</v-icon>
-      </v-btn>
-      <v-btn primary @click="createParty" class="join-party__create"
-        >Créer un tirage</v-btn
-      >
-    </v-row>
+    <v-text-field filled dense rounded v-model="partyId" placeholder="Entrer le code du tirage">
+      <template v-slot:append-outer>
+        <v-btn icon @click="joinParty" class="join-party__next">
+          <v-icon class large primary>mdi-arrow-right</v-icon>
+        </v-btn>
+      </template>
+    </v-text-field>
+    <v-btn class="join-party__create" color="primary" @click="createParty">Créer un tirage</v-btn>
   </v-container>
 </template>
 <script>
