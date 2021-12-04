@@ -1,41 +1,40 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 import JoinParty from "../components/JoinParty";
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Join',
-    component: JoinParty
+    path: "/",
+    name: "Join",
+    component: JoinParty,
   },
   {
-    path: '/create',
-    name: 'Create',
-    component: () => import('../components/CreateParty')
+    path: "/create",
+    name: "Create",
+    component: () => import("../components/CreateParty"),
   },
   {
-    path: '/create/id',
-    name: 'id',
-    component: () => import('../components/Id')
+    path: "/create/id/:id",
+    name: "id",
+    component: () => import("../components/Id"),
   },
   {
-    path: '/party/:id',
-    name: 'Party',
-    component: () => import('../components/ParticipantList')
+    path: "/party/:id",
+    name: "Party",
+    component: () => import("../components/ParticipantList"),
   },
   {
-    path: '/party/:id/:name',
-    name: 'Santa',
-    component: () => import('../components/Santa')
-  }
-
-]
+    path: "/party/:id/:name",
+    name: "Santa",
+    component: () => import("../components/Santa"),
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

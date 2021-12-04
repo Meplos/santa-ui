@@ -2,7 +2,6 @@
   <div class="home">
     <div class="home__header"></div>
     <div class="home__body">
-      <p v-if="id">Votre partie à l'id: {{ id }}</p>
       <router-view @nav="navigate" @create="createParty"></router-view>
     </div>
     <div class="home__footer"></div>
@@ -25,7 +24,6 @@ export default {
     createParty(participants) {
       //TODO REST call to create party
       console.log(participants);
-      this.id = "qmldkjfqmldjfmq";
     },
   },
   mounted: function () {
