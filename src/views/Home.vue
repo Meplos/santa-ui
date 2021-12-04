@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <div class="home__header"></div>
+    <div class="home__header">
+      <h1>Secret Santa</h1>
+    </div>
     <div class="home__body">
       <router-view @nav="navigate" @create="createParty"></router-view>
     </div>
@@ -40,9 +42,28 @@ export default {
   },
 };
 </script>
-<style>
-.home__body {
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+.home {
+  font-family: Satisfy, cursive;
   margin: auto;
   top: 50%;
+}
+
+.home__header {
+  background-color: #e53e3e;
+  color: #ffff;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-end-start-radius: 10px;
+  border-end-end-radius: 10px;
+}
+
+.home__header > h1 {
+  font-weight: 100;
 }
 </style>
