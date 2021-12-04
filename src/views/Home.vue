@@ -12,13 +12,11 @@
 <script>
 // @ is an alias to /src
 
-
 export default {
-  name: 'Home',
-  components: {
-  },
+  name: "Home",
+  components: {},
   data: () => ({
-    id: undefined
+    id: undefined,
   }),
   methods: {
     navigate({ name, params, props }) {
@@ -27,10 +25,20 @@ export default {
     createParty(participants) {
       //TODO REST call to create party
       console.log(participants);
-      this.id = "qmldkjfqmldjfmq"
-    }
-  }
-}
+      this.id = "qmldkjfqmldjfmq";
+    },
+  },
+  mounted: function () {
+    axios
+      .get("https://santaserver-dev.herokuapp.com/test")
+      .then((res) => {
+        console.log(res);
+      })
+      .then((err) => {
+        console.log(err);
+      });
+  },
+};
 </script>
 <style>
 .home__body {
