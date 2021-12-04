@@ -6,8 +6,8 @@ import axios from "axios";
 
 Vue.config.productionTip = false;
 
-// axios.defaults.baseURL = "https://santaserver-dev.herokuapp.com/";
-axios.defaults.baseURL = "http://localhost:3000/";
+axios.defaults.baseURL = "https://santaserver-dev.herokuapp.com/";
+// axios.defaults.baseURL = "http://localhost:3000/";
 Vue.prototype.$axios = axios;
 new Vue({
   vuetify,
