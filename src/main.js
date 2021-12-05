@@ -5,7 +5,7 @@ import router from "./router";
 import axios from "axios";
 Vue.config.productionTip = false;
 
-axios.defaults.baseURL = process.env.VUE_API_BASE_URL;
+axios.defaults.baseURL = "https://santaserver64.herokuapp.com";
 Vue.prototype.$axios = axios;
 new Vue({
   vuetify,

@@ -36,7 +36,7 @@
 <script>
 export default {
   data: () => ({
-    participants: ["Cloé", "Nina", "Léa"],
+    participants: [""],
   }),
   methods: {
     remove(index) {
