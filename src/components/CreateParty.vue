@@ -18,15 +18,15 @@
       </v-btn>
       <v-spacer></v-spacer>
     </v-row>
-    <v-row class="ma-auto align-cente create-party__btns">
-      <v-col cols="2">
+    <v-row class="ma-auto align-center">
+      <v-col sm="5" md="2" lg="2">
         <v-btn fab @click="add" color="secondary">
           <v-icon>mdi-plus</v-icon>
         </v-btn>
       </v-col>
       <v-spacer></v-spacer>
-      <v-col cols="2" offset-sm-10>
-        <v-btn fab @click="create" color="secondary">
+      <v-col sm="5" md="2" lg="2">
+        <v-btn fab @click="create" color="secondary" style="float: right">
           <v-icon>mdi-send</v-icon>
         </v-btn>
       </v-col>
@@ -57,14 +57,4 @@ export default {
   },
 };
 </script>
-<style>
-.create-party__btns {
-  bottom: 0px;
-  position: fixed;
-  z-index: 2;
-}
-
-.create-party__row {
-  z-index: 2;
-}
-</style>
+<style></style>

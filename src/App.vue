@@ -1,22 +1,26 @@
 <template>
   <v-app id="app">
-    <div class="home__header">
+    <div class="home__header" @click="$router.push({ name: 'Join' })">
       <h1>Secret Santa</h1>
     </div>
     <home />
   </v-app>
 </template>
 <script>
-import Home from './views/Home.vue'
+import Home from "./views/Home.vue";
 
 export default {
   components: {
-    Home
-  }
-}
+    Home,
+  },
+};
 </script>
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+.home__header {
+  font-family: Satisfy, cursive;
+}
 .home {
   font-family: Satisfy, cursive;
 }
@@ -36,11 +40,5 @@ export default {
 
 .home__header > h1 {
   font-weight: 100;
-}
-
-.home__footer {
-  position: fixed;
-  bottom: 0px;
-  margin: 0 auto;
 }
 </style>
