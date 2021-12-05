@@ -25,7 +25,11 @@ export default {
   }),
   methods: {
     joinParty() {
-      this.$emit("nav", { name: "Party", params: { id: this.partyId.trim() } });
+      this.$emit("nav", {
+        name: "Party",
+        params: { id: this.partyId.trim() },
+        img: "",
+      });
     },
     createParty() {
       this.$emit("nav", { name: "Create", img: "" });
